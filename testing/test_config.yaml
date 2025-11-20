@@ -1,0 +1,47 @@
+# Global seed for reproducibility
+seed: 2025
+
+# Image configuration
+img_size: 256
+
+# Model configuration
+model_name: 'LiteMedSAM'
+
+# Adapter configuration (must match training config)
+use_adapters: true
+use_conv_adapters: true
+channel_reduction: 0.25
+use_sam_med_adapters: false
+
+# Dataset configuration
+dataset: 'ARCADE'
+# Test dataset path
+test_path: "C:/Users/Michela/Desktop/arcade/syntax/test"
+
+# Results output path
+results_path: "results/LiteMedSAM_Final_Results_ARCADE"
+
+# Model checkpoint path (trained model to evaluate)
+checkpoint: "../checkpoints/CoroSAM/CoroSAMSAM_Final_Training.pt"
+
+# Output options
+save_predictions: false  # Set to true to save visualization images
+
+# Prompting configuration
+use_boxes: false
+use_points: false
+num_pos_pts: null
+num_neg_pts: null
+num_tips: null
+num_other: null
+
+divide_channels: true
+use_prompts: true
+
+# Prompt augmentation (set to 0 for testing)
+points_shift: 0
+
+# Parameter sweep for testing different prompt configurations
+# Test with multiple combinations of num_tips and num_other
+num_tips_list: [null]  # Example: [null, 1, 2, 3] to test different numbers of tip points
+num_other_list: [null]    # Example: [0, 1, 2] to test different numbers of other points

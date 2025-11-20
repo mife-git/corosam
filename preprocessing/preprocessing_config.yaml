@@ -1,0 +1,39 @@
+# Root directory containing train/ val/ test/
+dataset_name: "ARCADE"
+root_dir: "C:/Users/Michela/Desktop/arcade/syntax"  # Change with your path
+
+# Subfolders for each dataset split
+tasks:
+  - train
+  - val
+  - test
+
+# JSON file names (original)
+json_names:
+  train: "train.json"
+  val: "val.json"
+  test: "test.json"
+
+# JSON output names (renumbered versions)
+output_json_names:
+  train: "train_renamed.json"
+  val: "val_renamed.json"
+  test: "test_renamed.json"
+
+# Folders (relative to each task folder)
+folders:
+  images: "images"
+  annotations: "annotations"
+
+# Augmentation settings
+augmentation:
+  # Which splits to augment (typically only train)
+  tasks:
+    - train
+
+  # Augmentation parameters
+  seed: 2025
+  probability: 0.5  # Probability threshold for each augmentation
+  rotation_range: 180  # Maximum rotation angle in degrees
+  zoom_range: 0.5  # Zoom range (0.5 = 50% to 150%)
+  brightness_range: 0.5  # Brightness variation range

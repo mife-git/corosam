@@ -1,0 +1,70 @@
+# ------------------------------
+# PYTHON
+# ------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.manifest
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+sdist/
+MANIFEST
+
+# Logs
+*.log
+
+# ------------------------------
+# PYCHARM / IDE
+# ------------------------------
+.idea/
+*.iml
+.vscode/
+
+# ------------------------------
+# DATA / MODELS
+# ------------------------------
+# Pretrained checkpoints
+checkpoint/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+
+# Testing outputs
+testing/results/
+
+# Cache
+.cache/
+*.tmp
+tmp/
+temp/
+
+# ------------------------------
+# SYSTEM FILES
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# ENVIRONMENT
+# ------------------------------
+.env
+*.env

@@ -1,0 +1,77 @@
+# Global seed for reproducibility
+seed: 2025
+
+# Image configuration
+img_size: 256
+
+# Model and experiment configuration
+model_name: 'LiteMedSAM'
+exp_name: 'Train_Final'
+
+# Adapter configuration
+use_adapters: true
+use_conv_adapters: true
+channel_reduction: 0.25
+use_sam_med_adapters: false
+train_only_adapters: true
+pretrained: true
+
+# Pretrained checkpoint path
+initial_checkpoint: "../checkpoints/Pretrained/lite_medsam.pth"
+
+# Dataset root path (same as preprocessing)
+dataset_root: "C:/Users/Michela/Desktop/arcade/syntax"
+
+# For k-fold cross-validation (when n_folds > 1)
+# This path is created by split_dataset.py
+k_fold_path: "C:/Users/Michela/Desktop/arcade/syntax/kf_split"
+
+# For single training run (when n_folds == 1 or not set)
+# train_path uses train_all created by merge_and_augment.py
+# Use images_augmented folder to include augmented data
+train_path: "C:/Users/Michela/Desktop/arcade/syntax/train_all/images_augmented"
+val_path: "C:/Users/Michela/Desktop/arcade/syntax/test"
+
+# Checkpoints path
+checkpoints_path: '../checkpoints/LiteMedSAM'
+
+# Training hyperparameters
+epochs: 25
+lr: 0.0005  # 5e-4
+wd: 0.01    # 1e-2
+batch_size: 4
+dropout: 0.1
+alpha_focal: null
+
+# Cross-validation configuration
+# Set to 1 for single training run using train_all
+# Set to >1 for k-fold cross-validation using kf_split folders
+n_folds: 5
+
+# Data augmentation
+# Note: When using k-fold (n_folds > 1), augmented images are already
+# included in the split folders, so additional augmentation is disabled
+# When n_folds == 1, set this to false if using images_augmented folder
+use_augmented: false
+
+# Prompt augmentation parameters
+points_shift: 5
+bbox_shift: 10
+
+# Prompting parameters (set to null if not using)
+use_boxes: false
+use_points: false
+num_pos_pts: null
+num_neg_pts: null
+num_tips: null
+num_other: null
+
+# Custom prompting strategy
+divide_channels: true  # Whether to use separate channel for prompts
+use_prompts: true      # Whether to use prompts at all
+
+# Logging and saving options
+proj_name: 'CoroSAM'
+save_models: false
+use_wandb: false
+use_amp: true

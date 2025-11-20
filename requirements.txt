@@ -1,0 +1,17 @@
+monai
+opencv-python
+Pillow
+scipy
+scikit-learn
+scikit-image
+pandas
+PyYAML
+tqdm
+wandb
+matplotlib
+altair==5.5.0
+plantcv
+timm
+einops
+pyqt5
+pydicom
