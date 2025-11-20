@@ -71,7 +71,7 @@ Our pretrained CoroSAM model trained on ARCADE is available here:
 
 📥 **[Download CoroSAM Checkpoint](https://drive.google.com/file/d/1wgZ4ZojzC9bea92EVavQDGaH8ijGcawC/view?usp=sharing)**
 
-Save as: `checkpoints/CoroSAM/corosam_pretrained.pth`
+Save as: `checkpoints/CoroSAM/CoroSAM_Final_Training.pt`
 
 ---
 
