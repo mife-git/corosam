@@ -62,7 +62,7 @@ Download and place in `checkpoints/Pretrained/`:
 
 | Model | Source | Path |
 |-------|--------|------|
-| **LiteMedSAM** | [GitHub](https://github.com/bowang-lab/MedSAM) | `checkpoints/Pretrained/lite_medsam.pth` |
+| **LiteMedSAM** | [GitHub](https://github.com/bowang-lab/MedSAM/tree/LiteMedSAM) | `checkpoints/Pretrained/lite_medsam.pth` |
 | **SAMMed2D** | [GitHub](https://github.com/OpenGVLab/SAM-Med2D) | `checkpoints/Pretrained/sam-med2d_b.pth` |
 
 ### CoroSAM
