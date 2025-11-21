@@ -128,7 +128,7 @@ syntax/
 ├── train_all/          # Merged train+val
 │   ├── images/
 │   ├── annotations/
-│   ├── images_augmented/      # With augmentations
+│   ├── images_augmented/
 │   └── annotations_augmented/
 └── kf_split/           # 5-fold cross-validation
     ├── set1/
@@ -181,7 +181,7 @@ python training/train.py --config train_config.yaml
 **Single training run:**
 ```yaml
 n_folds: 1
-train_path: "C:/path/to/arcade/syntax/train_all/images_augmented"
+train_path: "C:/path/to/arcade/syntax/train_all"
 val_path: "C:/path/to/arcade/syntax/test"
 ```
 
