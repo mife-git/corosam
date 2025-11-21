@@ -198,7 +198,7 @@ Edit `test_config.yaml`:
 ```yaml
 # Model
 model_name: "LiteMedSAM"
-checkpoint: "checkpoints/CoroSAM/corosam_pretrained.pth"
+checkpoint: "checkpoints/CoroSAM/CoroSAM_Final_Training.pt"
 
 # Dataset
 test_path: "C:/path/to/arcade/syntax/test"
