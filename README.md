@@ -62,7 +62,7 @@ Download and place in `checkpoints/Pretrained/`:
 
 | Model | Source | Path |
 |-------|--------|------|
-| **LiteMedSAM** | [GitHub](https://github.com/bowang-lab/MedSAM) | `checkpoints/Pretrained/lite_medsam.pth` |
+| **LiteMedSAM** | [GitHub](https://github.com/bowang-lab/MedSAM/tree/LiteMedSAM) | `checkpoints/Pretrained/lite_medsam.pth` |
 | **SAMMed2D** | [GitHub](https://github.com/OpenGVLab/SAM-Med2D) | `checkpoints/Pretrained/sam-med2d_b.pth` |
 
 ### CoroSAM
@@ -71,7 +71,7 @@ Our pretrained CoroSAM model trained on ARCADE is available here:
 
 📥 **[Download CoroSAM Checkpoint](https://drive.google.com/file/d/1wgZ4ZojzC9bea92EVavQDGaH8ijGcawC/view?usp=sharing)**
 
-Save as: `checkpoints/CoroSAM/corosam_pretrained.pth`
+Save as: `checkpoints/CoroSAM/CoroSAM_Final_Training.pt`
 
 ---
 
@@ -128,7 +128,7 @@ syntax/
 ├── train_all/          # Merged train+val
 │   ├── images/
 │   ├── annotations/
-│   ├── images_augmented/      # With augmentations
+│   ├── images_augmented/
 │   └── annotations_augmented/
 └── kf_split/           # 5-fold cross-validation
     ├── set1/
@@ -181,7 +181,7 @@ python training/train.py --config train_config.yaml
 **Single training run:**
 ```yaml
 n_folds: 1
-train_path: "C:/path/to/arcade/syntax/train_all/images_augmented"
+train_path: "C:/path/to/arcade/syntax/train_all"
 val_path: "C:/path/to/arcade/syntax/test"
 ```
 
