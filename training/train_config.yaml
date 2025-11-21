@@ -29,7 +29,7 @@ k_fold_path: "C:/Users/Michela/Desktop/arcade/syntax/kf_split"
 # For single training run (when n_folds == 1 or not set)
 # train_path uses train_all created by merge_and_augment.py
 # Use images_augmented folder to include augmented data
-train_path: "C:/Users/Michela/Desktop/arcade/syntax/train_all/images_augmented"
+train_path: "C:/Users/Michela/Desktop/arcade/syntax/train_all"
 val_path: "C:/Users/Michela/Desktop/arcade/syntax/test"
 
 # Checkpoints path
@@ -46,13 +46,11 @@ alpha_focal: null
 # Cross-validation configuration
 # Set to 1 for single training run using train_all
 # Set to >1 for k-fold cross-validation using kf_split folders
-n_folds: 5
+n_folds: 1
 
 # Data augmentation
 # Note: When using k-fold (n_folds > 1), augmented images are already
 # included in the split folders, so additional augmentation is disabled
-# When n_folds == 1, set this to false if using images_augmented folder
-use_augmented: false
 
 # Prompt augmentation parameters
 points_shift: 5

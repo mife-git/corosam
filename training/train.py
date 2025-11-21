@@ -148,10 +148,15 @@ def save_model(epoch, model, optimizer, path, name, suffix):
 
 def create_dataloaders(train_path, val_path, config):
     """Creates training and validation dataloaders."""
+
+    use_aug = False
+    if config.get('n_folds') == 1:
+        use_aug = True  # Use augmentation only in single-fold training
+
     train_dataset = CoroDataset(
         train_path,
         image_size=config['img_size'],
-        use_augmented=not config.get('k_fold_path'),  # Use augmentation only in single-fold training
+        use_augmented=use_aug,
         num_pos_pts=config.get('num_pos_pts'),
         num_neg_pts=config.get('num_neg_pts'),
         num_tips=config.get('num_tips'),
